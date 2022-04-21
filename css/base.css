@@ -1,0 +1,13 @@
+body {
+  margin: 0 auto;
+  max-width: 780px;
+}
+
+header {
+  background-color: blue;
+  color: white;
+}
+
+h1, h2, h3 {
+  padding: .8rem;
+}
