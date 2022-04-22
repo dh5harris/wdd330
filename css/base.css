@@ -1,13 +1,18 @@
 body {
   margin: 0 auto;
-  max-width: 780px;
+  max-width: 600px;
 }
 
-header {
-  background-color: blue;
+header, footer {
+  background-color: #000097;
   color: white;
+  border-radius: 10px;
 }
 
 h1, h2, h3 {
   padding: .8rem;
+}
+
+footer p {
+  padding: .5rem;
 }
