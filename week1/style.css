@@ -1,0 +1,14 @@
+body {
+  max-width: 700px;
+  padding: 10px;
+}
+
+textarea {
+  background-color: lightgreen;
+  height: 300px;
+  width: 600px;
+}
+
+section {
+  padding: 10px 0;
+}
