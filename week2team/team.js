@@ -36,7 +36,6 @@ function getInput(){
 
     let input = document.getElementById('userinput').value;
 
-
     let number = parseFloat(input)
 
     let total = total_num(number)
