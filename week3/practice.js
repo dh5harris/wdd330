@@ -96,3 +96,13 @@ const batman = {
  "villain": false,
  "allies": ["Robin", "Batgirl", "Superman"]
 }
+
+const today = new Date();
+const year = today.getFullYear();
+console.log(today)
+const date = document.getElementById('date');
+date.textContent = `${today}` ;
+const footer = document.querySelector('footer');
+footer.textContent = `Copyright ${year}`
+// date.textContent = year;
+
