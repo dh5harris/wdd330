@@ -55,7 +55,8 @@
 
       <p>
         The Math Object is built into JavaScript. Think of the Math library for
-        Python except that it does not need to be imported.
+        Python except that it does not need to be imported. Also the Date object
+        is built into JavaScript.
       </p>
       <p>Most Math methods:</p>
       <ul>
@@ -91,12 +92,122 @@
         Regular Expressions or RegExp, is used to search strings for matches to
         a pattern.
       </p>
+      <p>
+        You can use the nodeType property to find out what type of node it is.
+        The nodeName property is used to find the name of the element.
+      </p>
+      <ul>
+        <li>
+          getElementById() returns the element with the specified id attribute.
+          If no element with the id provided, null is returned.
+        </li>
+        <li>
+          getElementsByTagName() returns all the elements with the tag name
+          provided in a node list.
+        </li>
+        <li>
+          getElementsByClassName() returns a node list of all the elements that
+          have the class name specified.
+        </li>
+        <li>
+          querySelector() allows you to use CSS notation to get the
+          <em>first</em> element in the document that matches the CSS selector
+          provided.
+        </li>
+        <li>
+          querySelectorAll() also can use CSS noation. Returns a node list of
+          <em>all</em> the elements in the document that matches the CSS query
+          selector.
+        </li>
+      </ul>
+      <p>
+        The querySelector() method can be called on any element, rather than
+        just document.
+      </p>
+      <p>
+        Text, whether actual text, '', or a \n, has its own node called a text
+        node. You can use the getAttribute() method returns the value of the
+        arrtibute provided as the argument. You can set or change an attirbute
+        using the setAttribute() method. setAttribute() requires two parameters,
+        the attribute and the value it is being set to. The attribute and value
+        are in qoutes and seperated by a comma. You can use .classList.add() to
+        add more classes to an element. The values are in qoutes and seperated
+        by commas if there are multiple classes being added. To remove classes
+        from an element use .classList.remove(). The toggle() method is useful
+        to add a class to an element if it doesn't have it already, and will
+        remove that class if it already has it. Very useful with buttons that
+        goes between a list view and a grid view.
+      </p>
+      <p>
+        Creating dynamic markup. How to create elements and add them to a page.
+        document.createElement() takes a tag name as a parameter to create or
+        return that element. You use the .appendChild() method to add the
+        element or node to the parent element that it is being added to and it
+        is always added to the bottom of the list. If you don't want something
+        appended to the bottom of the list, use .insertBefore(). The
+        .insertBefore() takes two parameters, the new node, and the node you
+        want it to go before. Use textContent instead of createTextNode.
+        textContent adds a text node to an element without the need to append
+        it. To remove a child element use .removeChild() from the parent
+        element. The .replaceChild() can be used to replace one node with
+        another.
+      </p>
+      <p>
+        The innerHTML can be used to insert HTML code inside an element. To stop
+        any malicious content being added to a page unsing innerHTML, any code
+        contained with "script" tags is not executed.
+      </p>
+      <p>
+        Every element node has a style property. You can JavaScript to add CSS.
+        CSS property names that have a '-' must be written in camelCase or use
+        bracket notation. Example, background-color become
+        .style.backgroundColor or .style['background color']. Limit the
+        JavaScript CSS styling and use a CSS in a seperate stylesheet.
+      </p>
+      <p>
+        An event listerner can be added to any element of the DOM. Inline event
+        handlers, written in the html page, are not best practice and should be
+        avoided. The Event listerners should be in the JavaScript file. The
+        addEventListerner() method is called on a node object. It can be called
+        without a node, which would be the whole browser window. The first
+        parameter is the type of event. The second is a callback function that
+        is invoke when the event occours. There is a third parameter, later in
+        the chapter. The function does not parentheses after it when it is an
+        argument.
+      </p>
+      <p>
+        Mouse events use click (a click of the mouse button), mousedown (when
+        the mouse button is pressed), mouseup (when the mouse button is
+        released), dblclick (a double click), mouseover (when the mouse pointer
+        is hovering over an element), mouseout (when the mouse pointer moves
+        away from the element), and mousemove (when the mouse moves).
+      </p>
+      <p>
+        Keyboard events are keypress, keydown, and keyup. Modifier keys such as
+        shift, ctrl, alt, and cmd have keyup and keydown events, but not a
+        keypress event because they don't display any thing to the screen.
+      </p>
+      <p>
+        Touch events are for touch screens and trackpads. Touch events are
+        usually made with a finger, but can include a stylus. It is immportant
+        to support mouse and touch events because you don't know what device one
+        is going to be using. Plus with a mobile first approach, you have to
+        consider from phone to desktop.
+      </p>
     </section>
     <section>
       <h2>Questions:</h2>
       <p>
         Is "this" similiar to "self" used to define methods in Python classes?
         It seems to be.
+      </p>
+      <p>
+        How much CSS styling do you want to do with JavaScript? I assume little
+        as possible.
+      </p>
+      <p>
+        Which is better or the prefered way to use for targeting elements with
+        an id, getElementById or querySelector?
       </p>
     </section>
   </body>
