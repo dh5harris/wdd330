@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Week 5</title>
+  </head>
+  <body>
+    <h1>Week 4</h1>
+    <section>
+      <h2>Practice:</h2>
+      <p>This week's practice.</p>
+    </section>
+    <section>
+      <h2>Notes:</h2>
+      <p>
+        The input element has new attributes in HTML 5. The autofocus attribute
+        give the element focus when the page loads. The placeholder attribute is
+        similiar to the HTML placeholder attribute. The maxlength attribute
+        limits the number of character that can be entered. There are several
+        input fields.
+      </p>
+      <ul>
+        <li>
+          Text. The input type='text', which is for a short piece of text. The
+          type='text' attribute isn't required, it is the default value, but for
+          best practices it be used.
+        </li>
+        <li>
+          Password. The input type='password' is used for passwords or serect
+          information. The characters are concealed on the scene.
+        </li>
+        <li>
+          Checkbox. The input type='checkbox' are to select different options
+          from a list of options. One or more options can be chosen. Checkboxes
+          are grouped together with the same 'name' attribute.
+        </li>
+        <li>
+          Radio Button. The input type='radio' are to select one option from a
+          list of options. Only one can be chosen. Radio buttons are grouped
+          together with the same 'name' attribute.
+        </li>
+        <li>
+          Hidden field. The input type='hidden' are not displayed by the
+          browser. They do have a 'value' sttribute that can contain information
+          that is sent with the form. Note: the information in the hidden input
+          is not secret, it is visable in the HTML. Don't not use for sensitive
+          data.
+        </li>
+        <li>
+          File type. The input type='file' is used to upload files. Most
+          browsers provide a broswe button.
+        </li>
+        <li>
+          Select drop-down list. The input type='select' is used to select one
+          or more options from a list of values. The 'multiple' attribute is
+          required if more than one option is to be selected.
+        </li>
+        <li>
+          Text Area. The input type='textarea' is used to to enter long pieces
+          of text over muiltple lines such as a comment or blog post.
+        </li>
+        <li>
+          Buttons.
+          <ul>
+            <li>
+              Submit. The button type='submit' is used to submit a form. It is
+              the default type of button.
+            </li>
+            <li>
+              Reset. The button type='reset' is used to clear or 'reset' all the
+              form fields to their intial settings.
+            </li>
+          </ul>
+          Button. The button type='button' is a generic button. It does not need
+          to be inside a form element. It just creates a clickable button that
+          can have an event listener attached to it.
+        </li>
+        <li>
+          Other Input types. New to HTML 5.
+          <ul>
+            <li>Number. The input type='number is used for numeric inputs'</li>
+            <li>
+              Telephone. The input type='tel'is used to enter phone number
+            </li>
+            <li>Color. The input type='color' is used to pick a color.</li>
+            <li>
+              Date. The input type='date' is used to pick a date from a
+              calendar.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        Form validation is the process of checking whether a user has entered
+        the information into a form correctly. Examples of form validation are:
+        a required field is completed, a valid email address was entered, a
+        number entered for a numerical data, a password that has certain
+        requirements. Validation can happen on the client and server sides. It
+        is recommended to use both client-side and server-side validation. You
+        can use the preventDefault() method to stop the form from being
+        submitted.
+      </p>
+    </section>
+    <section>
+      <h2>Questions:</h2>
+      <ul>
+        <li>
+          <p>
+            What is the best way to access form elements? The book (under 'A
+            Searching Example') gives some examples of targeting the form and
+            the input.
+            <span class="code">
+              "const form = document.forms['search']; <br />
+              "const input = form.elements.searchInput;" <br />
+              "input.addEventListener('focus', () =>alert('focused'),
+              false);"</span
+            >
+            The addEventListener would give an
+            <span class="code">
+              "Uncaught TypeError: Cannot read the properties of
+              undefined"</span
+            >
+            whch was referenced to the input getting focus. When I changed the
+            const input to
+            <span class="code">
+              "const input = document.querySelector('input');"</span
+            >
+            then everything seemed to work as it should. So should we target the
+            input with a querySelector or the form.elements.searchInput? Just
+            wondering.
+          </p>
+        </li>
+        <li></li>
+      </ul>
+    </section>
+  </body>
+</html>
