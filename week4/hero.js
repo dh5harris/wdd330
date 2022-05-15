@@ -54,4 +54,14 @@ function makeHero(event) {
   
 }
 
+function disableSubmit(event) {
+  if(event.target.value === '') {
+    document.getElementById('submit').disabled = true;
+  } else if (event.target.value === 'x' || event.target.value === 'X') {
+    document.getElementById('submit').disabled = true;
+  } else {
+    document.getElementById('submit').disabled = false;
+  }
+}
+formName.addEventListener('keyup', disableSubmit);
 

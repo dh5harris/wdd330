@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <style>
+      body {
+        max-width: 680px;
+      }
       .error {
         background: #f99;
         border: #900 1px soild;
@@ -86,8 +89,8 @@
 Born as Kal-El on the planet Krypton...</textarea
         >
       </label>
-      <button type="reset">Reset</button>
-      <button type="submit">Submit</button>
+      <button type="reset" id="reset">Reset</button>
+      <button type="submit" id="submit" disabled>Submit</button>
     </form>
     <script src="hero.js"></script>
   </body>

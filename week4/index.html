@@ -5,13 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Week 5</title>
+    <title>Week 4</title>
   </head>
   <body>
     <h1>Week 4</h1>
     <section>
       <h2>Practice:</h2>
       <p>This week's practice.</p>
+      <button>
+        <a href="hero.html">Hero Form</a>
+      </button>
+      <button>
+        <a href="hero.js">The JavaScript code</a>
+      </button>
+      <button><a href="quiz.html" id="quizBtn">Hero Quiz</a></button>
     </section>
     <section>
       <h2>Notes:</h2>
@@ -101,7 +108,32 @@
         requirements. Validation can happen on the client and server sides. It
         is recommended to use both client-side and server-side validation. You
         can use the preventDefault() method to stop the form from being
-        submitted.
+        submitted. A button can be disabled by using the disable attribute, then
+        use a JavaScript functioin to keep it disabled or enable it.
+      </p>
+      <p>
+        Object-Oriented Programming (OOP). Encapsulation is where code is kept
+        hidden from the user and the only things that are necessary are
+        available to the user. Like a transmission in a vehicle, The only one
+        thing that is necessary to the user is the shifter. Polymorphism is
+        where an objects have the same method but have the ability to overwrite
+        what the method does. Inheritence is where the child class inherits the
+        methods and properties of the parent class.
+      </p>
+      <p>
+        The literal noation to create a class is <br /><span class="code"
+          >const variableName = {code goes here}</span
+        ><br />Another way to create a class is with a constructor function;
+        <br /><span class="code">
+          const variableName = function(parameter=defaultValue)
+          {parameters,methods, and code goes here}</span
+        ><br />
+        ES6 gives the new class declaration syntax, which basically the same is
+        the constructor way, but you use the keyword class with the name of the
+        class. The class name is capitalized. Classes must be define before they
+        can be constructed, because they are not hoisted. The constructor method
+        is a special method of a class for creating and initializing an object
+        instance of that class.
       </p>
     </section>
     <section>
@@ -123,7 +155,7 @@
               "Uncaught TypeError: Cannot read the properties of
               undefined"</span
             >
-            whch was referenced to the input getting focus. When I changed the
+            which was referenced to the input getting focus. When I changed the
             const input to
             <span class="code">
               "const input = document.querySelector('input');"</span
