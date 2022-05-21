@@ -14,7 +14,58 @@
     </section>
     <section>
       <h2>Notes:</h2>
+      <p>
+        Liniting tolls such as JS Lint, JS Hint, and ES Lint can be used to test
+        the quality of JavaScript code. They are designed to highlight any
+        sloppy programming practices or syntax errors, and recommend style
+        conventions
+      </p>
+      <p>
+        Feature detection is using an if statement to see if that feature is
+        available to the browser. Caniuse.com is a great resource to look if
+        browsers have certain features. Debugging is the process of finding
+        errors in our code. Breakpoints is a place to stop the process of the
+        program and to see what values a in variables at that point in the code.
+        Using console.log() will log to the console the value of a variable at
+        different stages of the program.You can debug using Web browsers. You
+        can add breakpoints through the browser under the sources tab in dev
+        tools. You can add the 'debugger' command to a function. When the
+        function gets to the debugger command, it will automatically open the
+        browser's console so you can see the value of the variable.
+        <em>Remember</em> to remove all debugger commands before shipping.
+      </p>
+      <p>
+        When JavaScript "throws an exception" is when there is an error in the
+        code. There are 8 error objects built-in to the JavaScript engine:
+        error, EvalError - not really used, RangeError - when a number is
+        outside an allowable range of values, ReferenceError - for an item that
+        doesn't exist, SyntaxError - for error in the code's syntax, TypeError -
+        for an error in the type of value used, URIError - for a problem
+        encoding or decoding the URI, InternalError - a non-standard error.
+      </p>
+      <p>
+        JavaScript creates an error object with two properties: name and
+        message. The name property is the error consturctor such as 'Error' or
+        'ReferenceError'. The message property is a description of the error,
+        and stack - a stack trace for that error.
+      </p>
+      <p>
+        You can throw your own exceptions by using a throw error object when you
+        think there will be an error of some sort. The code you want to try or
+        test goes into a try block. try { code to 'try' or test}. If there is an
+        error, it can be passed to a catch block (after the try block) that
+        defines a code block to handle any error. catch(err) {code to handle the
+        errors}. The finally block, comes after the catch block, runs a block of
+        code regardless of the try result. finally {code to run}.
+      </p>
     </section>
     <section>Questions:</section>
+    <ul>
+      <li>
+        I could not find a good definition for what strict mode is exactly?
+        Sloppy mode vs strict mode? Does it have to do with JavaScript being a
+        loosely typed language and strict mode is to make more strongly typed?
+      </li>
+    </ul>
   </body>
 </html>
