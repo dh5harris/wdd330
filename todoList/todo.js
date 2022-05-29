@@ -16,15 +16,6 @@ function displayList(list, element, hidden) {
   })
 }
 
-// function displayFooter(list, element) {
-//   element.innerHTML = '';
-//   if (liveTasks !== null) {
-//     let tasksLeft = list.lenght;
-//     const footer = document.createElement('li');
-//     footer.innerHTML = `<div class='tasksLeft>${tasksLeft}</div><button>All</button><button>Active</button><button>Completed</button>`;
-//   }
-// }
-
 function getTasks(key) {
   if (liveTasks === null) {
     liveTasks = readFromLS(key) || [];
@@ -58,9 +49,13 @@ function filterTasks(key, completed = true) {
   return tasks.filter(item => item.completed === hidden);
 }
 
-// function findTask(id) {}
 
-// function completeTask(id) {}
+
+// function findTask(key) {}
+
+function completeTask(key) {
+  
+}
 
 
 export default class Tasks {
@@ -84,19 +79,15 @@ export default class Tasks {
     
   }
 
-  // listFooter() {
-  //   displayFooter(getTasks(this.key), this.listElement);
-  // }
 
-  // completedTasks() {
-  //   const taskList = document.getElementById('todoList');
-  //   completeTask(taskList.value, this.key);
-  //   console.log(taskList);
-  // }
+  completedTasks() {
+    const taskList = document.getElementById('todoList');
+    completeTask(taskList.value, this.key);
+    console.log(taskList);
+  }
 
   // deleteTask() {
   //   const task = document.getElementById('todoList');
-    
   //   removeTask(task.value, this.key);
   //   this.listTasks();
   // }
