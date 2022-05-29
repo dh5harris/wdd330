@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Challenge One: Todo list" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <h1>Todos</h1>
+    <ul id="todoList"></ul>
+    <ul class="todoListFooter">
+      <li id="tasksLeft"></li>
+      <li id="all"><button>All</button></li>
+      <li id="active"><button>Active</button></li>
+      <li id="completed"><button>Completed</button></li>
+    </ul>
+    <div class="input">
+      <input
+        type="text"
+        name="taskInput"
+        id="taskInput"
+        placeholder="What do you need to get done?"
+      />
+
+      <button id="addTask">Add</button>
+    </div>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
