@@ -14,14 +14,64 @@
     </section>
     <section>
       <h2>Notes:</h2>
+      <p>
+        Immediately Invoked Function Expression (IIFE 'iffy') is an anonymous
+        function that is invoked as soon as it is defined by placeing the () at
+        the end of the function definition. The IFFE has to be made into an
+        expression where the whole function declaration is placed inside (). The
+        IIFE has its own private scope.
+      </p>
+      <p>
+        A recursive function is one that calls itself until a certian condition
+        is met. Callbacks can be used to facilitate event-driven asynchronous
+        programming. JavaScript is single-threaded, one piece of code or one
+        task is processed at a time.
+      </p>
+      <p>
+        A callback is a function that is passed as an argument to another
+        function. This tachnique allows a function to call another function. A
+        callback function can run after another function has finished.
+        JavaScript functions are executed in the sequence they are called. Not
+        in the sequence they are difined. Callback hell, or nested callbacks, is
+        where you deal with a callback that is in another callback that is in
+        another callback. Don't nest functions.
+      </p>
+      <p>
+        A promise represents the future result of an asychronous operation.
+        Promises have 3 states; 1, "pending" or working on getting the result,
+        2, "fulfilled" when it has returned a value or completed successfully,
+        and 3, "rejected" when the result is an error or didn't complete
+        successfully. The promise results are undefined for pending, a result
+        value for fulfilled, and an error object for rejected. To create a
+        promise, you use a constructor function. Once a promise has been
+        resolved or settled, the then() method can be used to deal with the
+        outcome. The then() accepts two arguments. The first argument is the
+        fulfillment function when the promise is fulfilled. The second argument
+        is the rejection function for when the promise is rejected. You can also
+        chain a catch() method to the then(), which can be used to specify what
+        to do if the operation fails instead.
+      </p>
+      <p>
+        Async functions, ES2017, are functions that have async keyword before
+        the function keyword. This allows you to write asynchronous code as if
+        it was synchronous. This is achieved by using the await operator before
+        an asynchronous function is called. You can have functions that return
+        functions. To make use of those functions that are returned, they need
+        to be assigned to a variable.
+      </p>
+      <p>
+        A closure is a reference to a variable that was created inside the scope
+        of another function, but is then kept alive and used in another part of
+        the program. So the inner function has access to the outter function's
+        scope, variables, and so forth. Closures can also change the values of
+        the parent function's variables. A closure is formed when the inner
+        function is returned by the outter function.
+      </p>
     </section>
     <section>
       <h2>Questions:</h2>
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>When would you use an IIFE?</li>
       </ul>
     </section>
   </body>
