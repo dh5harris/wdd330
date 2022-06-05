@@ -1,0 +1,30 @@
+body {
+    width: 500px;
+    padding: 10px;
+    margin: auto;
+}
+img {
+    width: 90%;
+    margin-right: 10px;
+}
+ul li{
+    list-style-type: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+h1, h2 {
+    text-align: center;
+    background-color: aquamarine;
+    border: 1px solid black;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.hidden {
+    display: none;
+}
