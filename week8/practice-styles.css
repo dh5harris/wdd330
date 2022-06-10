@@ -1,0 +1,73 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+span {
+  display: inline-block;
+  transform: translateX(5px) scale(1.1, 1.2) skew(0deg, 0deg) rotate(0deg);
+  transform-origin: 10% 10%;
+  box-shadow: 5px 5px 10px 5px #1c1;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  border: 1px solid black;
+}
+
+div.a {
+  background-color: green;
+  transition: width 2s;
+  
+}
+
+div.b {
+  background-color: red;
+  transition: background-color 2s;
+  animation: beats 3s infinite;
+}
+
+div.c {
+  background-color: yellow;
+  transform: rotate(0deg);
+  transition: transform 1s;
+  transition-property: 90% 90%;
+}
+
+div.d {
+  background-color: purple;
+  transition: transform 1s;
+  border-radius: 50%;
+}
+
+div.a:hover {
+  background-color: slateblue;
+  width: 200px;
+}
+
+div.b:hover {
+  background-color: blue;
+  
+}
+
+div.c:hover {
+  background: orangered;
+  transform: rotate(360deg) scale(1.5);
+}
+
+div.d:hover {
+  background: grey;
+  transform: skew(25deg, 15deg);
+}
+
+@keyframes beats {
+  0%, 100% {
+    width: 75px;
+    height: 75px;
+  }
+  50% {
+    width: 200px;
+    height: 200px;
+  }
+}
