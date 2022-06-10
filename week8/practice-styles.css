@@ -13,22 +13,31 @@ div {
   width: 100px;
   height: 100px;
   margin: 5px;
-  border: 1px solid black;
+  
+}
+
+.transitions {
+  height: 250px;
+  display: grid;
+  grid-auto-flow: column;
 }
 
 div.a {
+  border: 1px solid black;
   background-color: green;
   transition: width 2s;
   
 }
 
 div.b {
+  border: 1px solid black;
   background-color: red;
   transition: background-color 2s;
   animation: beats 3s infinite;
 }
 
 div.c {
+  border: 1px solid black;
   background-color: yellow;
   transform: rotate(0deg);
   transition: transform 1s;
@@ -36,6 +45,7 @@ div.c {
 }
 
 div.d {
+  border: 1px solid black;
   background-color: purple;
   transition: transform 1s;
   border-radius: 50%;
