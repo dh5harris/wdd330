@@ -41,7 +41,7 @@ div.c {
   background-color: yellow;
   transform: rotate(0deg);
   transition: transform 1s;
-  transition-property: 90% 90%;
+  transform-origin: 35% 35%;
 }
 
 div.d {
@@ -63,7 +63,7 @@ div.b:hover {
 
 div.c:hover {
   background: orangered;
-  transform: rotate(360deg) scale(1.5);
+  transform: rotate(540deg) scale(1.5);
 }
 
 div.d:hover {
