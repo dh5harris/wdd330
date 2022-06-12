@@ -20,6 +20,8 @@ div {
   height: 250px;
   display: grid;
   grid-auto-flow: column;
+  align-items: center;
+  justify-items: center;
 }
 
 div.a {
@@ -69,6 +71,14 @@ div.c:hover {
 div.d:hover {
   background: grey;
   transform: skew(25deg, 15deg);
+}
+
+.draganddrop .mc {
+  text-align: center;
+}
+
+#mouseContent {
+  display: flex;
 }
 
 @keyframes beats {
