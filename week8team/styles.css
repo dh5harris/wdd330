@@ -1,0 +1,38 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #e0e0e0;
+  max-width: 500px;
+  margin: 0 auto;text-align: center;
+  border: 1px solid black;
+}
+
+h1, h2 {
+  font-family: 'Roboto Slab', serif;
+  text-decoration: underline;
+  padding: .8rem;
+  
+}
+
+h1 {
+  color: yellow;
+  background-color: black;
+}
+
+h2 {
+  background: #ffff9f;
+}
+
+ul {
+  list-style-type: none;
+  padding: .8rem;
+
+}
+
+p {
+  padding: .8rem;
+}
+
+button {
+  padding: .8rem;
+  margin: 0.5rem 0.5rem 2rem 0.5rem;
+}
