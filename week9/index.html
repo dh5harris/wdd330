@@ -14,11 +14,107 @@
     </section>
     <section>
       <h2>Notes:</h2>
+      <p>
+        Every JS enviroment has a global object. Any variables that are created
+        in the global scope are properties of the this object, the window object
+        in the browser. The Browser Object Model (or BOM) is a collection of
+        properties and methods that contain information about the browser and
+        the computer screen. There is no offical standard for the BOM, but a lot
+        of the methods and properties are supported by all major browsers. To
+        refer to a global variable, you do not need the name of the global
+        object before the variable name, just the variable name.
+      </p>
+      <p>
+        The alert(), confirm(), and prompt() are part of the window object. All
+        three stop the execution of the program until the are answered by the
+        user. The alert() method displays a dialog box. The message is provided
+        as an argument to the method. The confirm() method, like the alert(),
+        shows a message that is the argument, gives the user the option of 'OK'
+        or 'Cancel'. The prompt() method shows a message, that is provided by
+        argument, and an input field that allows the user to enter text. That
+        text is returned a string when the user clicks 'OK' or null when
+        'Cancel' is clicked.
+      </p>
+      <p>
+        The navigator property gives information about the browser and the
+        operating system that is being used. The location property has
+        information about the URL of the current page. The href property returns
+        the full URL as a string. The history property has access about previous
+        visited pages and the current session. The window screen object has
+        information about the size of the screen. This is useful for mobile. The
+        Document Object has properties that deal with the page. The write()
+        method - *"DO NOT USE"* - can write a string to a page. Use something
+        more in the lines of .textContent or something. Cookies is a small file
+        that are save on a user's computer. Cookies are limited to 4KB. can only
+        be read by a web page from the domain that set the cookie. Cookies help
+        with personalizing user experience. LocalStorage is handling more of
+        this. Cookies use a name/value pairs seperated by semicolons. Cookies
+        are session cookies by default, but they can be made to be persistent.
+      </p>
+      <p>
+        The window object has some timing functions. The setTimeout() accepts a
+        callback to a function as the first parameter. The second parameter is a
+        number in milliseconds. The setTimeout() returns an integer, which is
+        the ID to reference that particular timeout. The setInterval() works
+        like the setTimeout() expect that it will repeatedly invoke the callback
+        function after every given milliseconds.
+      </p>
+      <p>
+        Animation. You can use the setTimeout and setInterval methods to animate
+        elements on a web page. The requestAnimationFrame() came along to make
+        improvements like not running the animation when the tab is inactive. It
+        provides a smoother performance. With JS able to preform animations, it
+        is usually best to let CSS to handle animation instead of JS.
+      </p>
+      <p>
+        HTML APIs. With HTML being now a 'Living Standard', you can use a site
+        called CanIUse.com to see if elements are compatible to what browsers.
+        The data- attribute is new to HTML5. The data- attribute is a way to
+        embed data in a web page that are ignored by the browser. Their sole
+        prupose is to be used by a JS program. They must start with data-,
+        contain lowercase letters, numbers, dots, colons, or underscores, and
+        include an optional string value. Each element has a dataset property
+        that can be used to access any data- attributes it contains.
+      </p>
+      <p>
+        HTML 5 APIs help to gain access to hardware. One of the popular APIs is
+        LocalStorage. LocalStorage is like cookies but has few restrictions,
+        more storage capacity, and is easier to use. Some differences are that
+        localStorage information is not shared with the server on every request,
+        is available on multiple windows of the browser, the size limit is
+        greater that 4KB, and the data is not automatically expire as it does
+        with cookies. The information is stored in key/value pairs and the
+        values can only be strings. To save an object to localStorage, you have
+        to use JSON.stringify() to save it as a string. To retrieve the JSON
+        string, you use JSON.parse() to return it to a JSON object. Geolocation
+        API is used to obtain the geographical location of the device. You can
+        find their exact location, filter places nearby, and can measure the
+        user's location and speed (very helpful on mobile).
+      </p>
+      <p>
+        Websockets allow for two-way communication with a server, also knwon as
+        push messaging. The notification API allows you to show messages using
+        the system's notifications. Before you can send notifications, you have
+        to get permission from the user. An advantage of the notification api is
+        that the notifications will still display even if the tab is not the
+        current tab. The multimedia api is for controlling the playback of clips
+        using JS. It has the play() to start playing a clip, pause() to pause
+        the current position. The currentTime property is used to jump to
+        another part of the clip.
+      </p>
+      <p>
+        Shims and Polyfills are libraries of code that allow you to use apis as
+        usual because they fill in the necessary code that is not provided
+        natively by the user's browser. A shim is a piece of code that adds some
+        missing functionality to a browser. A polyfill is a shim that achieves
+        the same functionality, while also using the API commands that would be
+        used if the feature was supported natively.
+      </p>
     </section>
     <section>
       <h2>Questions:</h2>
       <ul>
-        <li></li>
+        <li>I somewhat understand web workers. When is web workers useful?</li>
         <li></li>
         <li></li>
         <li></li>
