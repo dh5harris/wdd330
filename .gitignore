@@ -1,0 +1,5 @@
+# Ingore node the parcel folder
+parcel/
+
+# ingore package-lock file
+/package-lock.json
