@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="validate.css" />
+    <title>Validate</title>
+  </head>
+  <body>
+    <form>
+      <p>
+        <fieldset>
+          <legend>Do you have a driver's license?
+            <abbr title="This field is required" aria-label="required">*</abbr>
+          </legend>
+          <label for="r1">Yes
+          <input type="radio" name="driver" id="r1" value="yes" required></label>
+          <label for="r2">No
+          <input type="radio" name="driver" id="r2" value="no" required></label>
+        </fieldset>
+      </p>
+      <p>
+        <label for="t1">What is you favorite fruit?
+          <abbr title="This field is required" aria-label="required">*</abbr>
+          <input type="text" id="t1" name="fruit" list="l1" required pattern="[Bb]anana|[Cc]herry">
+        </label>
+      </p>
+
+
+      <div>
+        <label for="choose">
+          Would you prefer a banana or a cherry?
+          <input
+            type="text"
+            id="choose"
+            name="i_like"
+            required
+            pattern="[Bb]anana|[Cc]herry"
+            minlength="6"
+            maxlength="6"
+        /></label>
+      </div>
+      <div>
+        <label for="number"
+          >How many would you like?
+          <input
+            type="number"
+            id="number"
+            name="amount"
+            value="1"
+            min="1"
+            max="10"
+          />
+        </label>
+      </div>
+      <div>
+        <button>Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
