@@ -14,6 +14,158 @@
     </section>
     <section>
       <h2>Notes:</h2>
+      <p>
+        Client-side form validation is an initial check and an important feature
+        of a good user experience; by catching invalid data on the client-side,
+        the user can fix it straight away before getting to the server.
+        Client-side validation should not be considered an exhaustive security
+        measure, because it is easy to bypass by malicious users. The user gets
+        messages for required fields not getting filled in, wrong email, phone,
+        password formats and etc. If the information is correctly formatted, the
+        data gets sent to the server/database.
+      </p>
+      <p>
+        There are three main reasons for form validation. 1) We want to get the
+        right data in the right format. 2) We want to protect the users' data
+        like secure passwords. 3) We want to protect ourselves from malicious
+        users that can misuse unprotected forms to damage the application. There
+        are two types of client-side validation; 1) Built-in form validation
+        using HTML 5. It is generally better than JavaScript validation, but is
+        not as customizable. 2) JavaScript validation uses JavaScript and is
+        completely customizable, but you need to create it all or use a library.
+      </p>
+      <p>
+        The built-in HTML 5 validation recap. These are attributes on form
+        elements. The required attribute specifices that a form field needs to
+        filled in. The minlength and maxlength attributes specifices the minimum
+        and maximum length of text data (strings). The min and max attributes
+        specifices the minimum and maximum values of numerical input types. The
+        type attribute specifices whether the data need to be a number, email
+        address, or some other type. The pattern attribute specifices a regular
+        expression that defines a pattern the entered data needs to follow. If
+        the data enter into the form follow the rules specificed by the above
+        attributes, then it is considered valid. If it does not, it is
+        considered invalid. When an element is valid it matches the :valid CSS
+        pseudo-class, which can be styled to those valid elements and will
+        submit the form unless JavaScript prevents it. When an element is
+        invalid, it matches the :invalid CSS pseudo-class which can be styled
+        and the browser will not submit the form and give an error message.
+      </p>
+      <p>
+        Regular expression or regex is a pattern that can used to match
+        character combinations in text strings. Regex is great for form
+        validation and a variety of ther uses in JavaScript. Some examples of
+        regex.
+      </p>
+      <ul>
+        <li>a - matches one character that is a (not b, not aa, and so on)</li>
+        <li>abc - matches a, followed by b, followed by c</li>
+        <li>
+          ab?c - matches a, optionally followed by a single b, followed by c (ac
+          or abc)
+        </li>
+        <li>
+          ab*c - matches a, optionally followed by any number of b's, followed
+          by c (ac, abc, abbbbc, and so on)
+        </li>
+        <li>a|b - matches one character that is a or b</li>
+        <li>
+          abc|xyz - matches exactly abc or exactly xyz (but not abcxyz or a or
+          y, and so on)
+        </li>
+      </ul>
+      <p>
+        With validating with JavaScript, you can take control over the look and
+        feel of native error messages and/or deal with lagacy browsers that do
+        not support HTML's built-in validation. Using the Constraint Validation
+        API to check the values that the user has enter in the form. It has the
+        following DOM interfaces.
+      </p>
+      <ul>
+        <li>HTMLButtonElement (represents a button element)</li>
+        <li>HTMLFieldSetElement (represents a fieldset element)</li>
+        <li>HTMLInputElement (represents an input element)</li>
+        <li>HTMLOutputElement (represents an output element)</li>
+        <li>HTMLSelectElement (represents a select element)</li>
+        <li>HTMLTextAreaElement (represents a textarea element)</li>
+      </ul>
+      <p>
+        The following properties are available to the above elements. The
+        validationMessage returns a string of a localized message describing
+        what validation constraints that the control doesn't satisfy. This is
+        the empty string if the control is not a candidate for constraint
+        validation (willValidate is false), or it satisfies its constraints. The
+        willValidate property returns true if the element will be validated when
+        the form is submitted. The validity property returns a ValidityState
+        object that contains several properties dedcribing the validity state of
+        the element. The common ones are:
+      </p>
+      <ul>
+        <li>
+          patternMismatch: returns true if the value does not match the
+          specificed pattern, otherwise it is false.
+        </li>
+        <li>
+          tooLong: returns true if the value is longer than the maximum length
+          specified by the maxlength attribute, otherwise it is false.
+        </li>
+        <li>
+          tooShort: returns true if the value is shorter than the minimum length
+          specified by the minlength attribute, otherwise it is false.
+        </li>
+        <li>
+          rangeOverflow: returns true if the value is greater than the maximum
+          specificed by the max attribute, otherwise it is false.
+        </li>
+        <li>
+          ragneUnderflow: returns true if the value is less than the minimum
+          specificed by the min attribute, otherwise it is false.
+        </li>
+        <li>
+          typeMismatch: returns true if the value is not in the required syntax
+          (when type is email or url), or otherwise it is false.
+        </li>
+        <li>
+          valid: returns true if the elements meet all its validation
+          constraints and is considered valid, or false if it fails any
+          constraint
+        </li>
+        <li>
+          valueMissing: returns true if the element has a required attribute,
+          but there is no value, otherwise it is false.
+        </li>
+      </ul>
+      <p>Some methods are:</p>
+      <ul>
+        <li>
+          checkValidity(): returns true if the element's value has no validity
+          problems; false otherwise. If the element is invalid, this method
+          fires an invalid event on the method.
+        </li>
+        <li>
+          reportValidity(): reports invalid field(s) using events. Useful when
+          combined with preventDefault() in a onSubmit event handler.
+        </li>
+        <li>
+          setCustomValidity(message): adds a custom error message to the
+          element. This method allows you to use JavaScript code to establish a
+          validation failure other than what is offered by HTML 5.
+        </li>
+      </ul>
+      <p>
+        The way HTML 5 form validation error messages are displayed are decided
+        by the browser. There is no standard way to style them with CSS.
+        Depending on the browser locale, the page can be in one language and the
+        error message in another. Customizing these error messages is one of the
+        most common use cases of the constraint validation API. To turn off the
+        browser's automatic validation, add the novalidate attribute to the form
+        element opening tag. It stops the form from showing its own error
+        message bubbles and allows ues to instead deisplay the custom error
+        messages in the DOM in some manner of own own choosing. For legacy
+        broswers, you can't use the constraint validation API or the HTML 5
+        built-in form validation. For that you will have to build your own using
+        JavaScript to validate the form.
+      </p>
     </section>
     <section>
       <h2>Questions:</h2>
