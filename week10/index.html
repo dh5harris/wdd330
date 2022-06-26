@@ -166,14 +166,77 @@
         built-in form validation. For that you will have to build your own using
         JavaScript to validate the form.
       </p>
+      <p>
+        The Fetch API provides a JavaScript interface for accessing and
+        manipulating parts of the HTTP pipeline, such as request and responses.
+        It provides a global fetch() method that provides an easy, logical way
+        to fetch resources asynchronously across the network. The promise
+        returned from fetch() won't reject on HTTP error status. The promise
+        will resolve normally as soon as the server responds with headers. The
+        ok property is set to true when the range is 200-299. It will only
+        reject on network failure or if anything prevented the request from
+        completing. fetch() won't send cookies in cross-origin request and wont
+        set any cookies sent back in cross-origin responses unless it is called
+        with the credentials option to include.
+      </p>
+      <p>
+        The simplest form of fetch() takes one argument, the path to the
+        resource you want to fetch in quotes. It does not directly return the
+        JSON response body but instead returns a promise that resolves with a
+        Response object. The Response object does not directly contain the
+        actual JSON response body but is instead a representation of the entire
+        HTTP response. To extract the JSON body content from the Response
+        object, use the json() method, which returns a second promise that
+        resolves with the result of parsing the response body text as JSON.
+      </p>
+      <p>
+        The fetch() method can have an optional second parameter, an init object
+        that allows you to control the number of different settings. These
+        settings include: setting: 'options' // other options * - default
+      </p>
+      <ul>
+        <li>method: 'POST'// *GET, POST, PUT, DELETE, etc</li>
+        <li>mode: 'cors'//no-cors, *cors, same-origin</li>
+        <li>
+          cache: 'no-cache', // *default, no-cache, reload, force-cache,
+          only-if-cached
+        </li>
+        <li>credentials: 'same-origin', // include, *same-origin, omit</li>
+        <li>
+          headers: {'Content-type': 'application/json'}
+          //'Content-type':'application/x-www-form-urlencoded'
+        </li>
+        <li>redirect: 'follow' // manual, *follow, error</li>
+        <li>
+          referrerPolicy: 'no-referrer', // non-referrer,
+          *no-referrer-when-downgrade, origin, origin-when-cross-origin,
+          same-origin, strict-origin-when-cross-origin, unsafe-url
+        </li>
+        <li>
+          body: JSON.stringify(data) // body data type must match "Content-Type"
+          header
+        </li>
+      </ul>
+      <p>
+        You can upload JSON-encoded data using the method:'POST'. Files can be
+        uploaded using an HTML 'input type="file"', the FormData() method and
+        fetch().
+      </p>
+      <p>
+        A fetch() will reject with a TypeError when a network error happens or
+        CORS is no configured correctly on the server. To check for a successful
+        fetch() includes checking that the promise resolved, then checking that
+        the Response.ok property has a value of true.
+      </p>
     </section>
     <section>
       <h2>Questions:</h2>
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>
+          When would you upload JSON-encoded data or a file? I assume that it
+          would be to make that data available to others like with a weather api
+          or the eartquake assignment.
+        </li>
       </ul>
     </section>
   </body>
