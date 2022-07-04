@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* font-family: 'Rubik', sans-serif; */
+
+body {
+  background-color: #1a43ab;
+  width: 700px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+  color: #fff;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.memory-game {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  
+}
