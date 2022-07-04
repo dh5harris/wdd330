@@ -1,0 +1,36 @@
+{
+  "images": [
+    {
+      "name": "angular",
+      "imageurl": "images/angular.svg"
+    },
+    {
+      "name": "css",
+      "imageurl": "images/css.svg"
+    },
+    {
+      "name": "electron",
+      "imageurl": "images/electron.svg"
+    }
+    ,{
+      "name": "eslint",
+      "imageurl": "images/eslint.svg"
+    },
+    {
+      "name": "jquery",
+      "imageurl": "images/jquery.svg"
+    },
+    {
+      "name": "nestjs",
+      "imageurl": "images/nestjs.svg"
+    },
+    {
+      "name": "node",
+      "imageurl": "images/node.svg"
+    },
+    {
+      "name": "vue",
+      "imageurl": "images/vue.svg"
+    }
+  ]
+}
