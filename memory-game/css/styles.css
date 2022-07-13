@@ -4,7 +4,10 @@
   box-sizing: border-box;
 }
 
-/* font-family: 'Rubik', sans-serif; */
+h2, h3 {
+  font-family: 'Rubik', sans-serif; 
+}
+/* */
 
 body {
   background-color: #9a00ff;
