@@ -16,9 +16,12 @@
   <body>
     <h1>Memory Game</h1>
     <h2><span id="message"></span></h2>
-    <h3>Turns: <span class="numberOfTurns"></span></h3>
-    <!-- <h2>Time: <span class="timeToComplete"></span></h2> -->
+    <div id="score">
+      <h3>Turns: <span id="turns"></span></h3>
+      <!-- <h3>Turns to beat: <span class="best"></span></h3> -->
+    </div>
+
     <div id="memory-game"></div>
-    <script src="js/memory.js"></script>
+    <script type="module" src="js/memory.js"></script>
   </body>
 </html>
