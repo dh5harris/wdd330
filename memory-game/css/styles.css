@@ -4,16 +4,10 @@
   box-sizing: border-box;
 }
 
-h2, h3 {
-  font-family: 'Rubik', sans-serif; 
-}
-/* */
-
 body {
   background-color: #9a00ff;
   width: 700px;
   margin: 0 auto;
-
 }
 
 h1 {
@@ -21,6 +15,15 @@ h1 {
   color: #fff;
   letter-spacing: 2px;
   text-align: center;
+}
+
+h2, h3 {
+  font-family: 'Rubik', sans-serif; 
+}
+
+#score {
+  display: flex;
+  justify-content: space-around;
 }
 
 #memory-game {
@@ -37,20 +40,19 @@ h1 {
   height: calc(25% - 10px);
   margin: 5px;
   position: relative;
-  transform: scale(1); 
+  transform: scale(1)  ; 
   transform-style: preserve-3d;
   transition: transfrom .2s;
 }
 
-.card:active {
-  transform: scale(.95);
+.card:hover {
+  transform: scale(.95) ;
   transition: transform .2s;
 } 
-
-/* */
+/*  */
 .card.flip {
   transform: rotateY(180deg);
-  transition: transform .5s;
+  transition: transform .2s;
 }
 
 .front, .back {
@@ -60,13 +62,10 @@ h1 {
   position: absolute;
   padding: 5px;
   box-shadow: 5px 5px 5px rgba(0,0,0,.5);
-  /* background-color: #ddd; */
   border: 5px solid #fff;
   backface-visibility: hidden;
   pointer-events: none;
 }
-
-
 
 .front {
   transform: rotateY(180deg);
@@ -79,7 +78,7 @@ h1 {
 
 #message {
   text-align: center;
-  height: 20px;
+  height: 30px;
   display: block;
   color: #fff;
 }
