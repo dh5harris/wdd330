@@ -13,6 +13,7 @@ function displayList(list, element, hidden) {
     // const formattedDate = new Date(task.id).toLocaleDateString("en-US");
     item.innerHTML = `<input type="checkbox"><label>${task.content}</label><button class='delBtn'>X</button>`;
     element.appendChild(item);
+    
   })
 }
 
@@ -34,6 +35,18 @@ function addTask(value, key) {
   writeToLS(key, liveTasks);
 }
 
+function completedTask(value, key) {
+  const newTask = {
+    id: key,
+    content: value,
+    completed: true
+  };
+
+  liveTasks.push(newTask);
+  writeToLS(key, liveTasks);
+}
+
+
 function removeTask(value, key) {
   const deleteTask = {
     id: key,
@@ -53,9 +66,6 @@ function filterTasks(key, completed = true) {
 
 // function findTask(key) {}
 
-function completeTask(key) {
-  
-}
 
 
 export default class Tasks {
@@ -63,6 +73,7 @@ export default class Tasks {
     this.listElement = listElement;
     this.key = key;
     bindTouch('#addTask', this.newTask.bind(this));
+
     this.listTasks();
   }
 
@@ -72,6 +83,7 @@ export default class Tasks {
     addTask(task.value, this.key);
     task.value = '';
     this.listTasks();
+    
   }
 
   listTasks(hidden = true) {
@@ -82,15 +94,16 @@ export default class Tasks {
 
   completedTasks() {
     const taskList = document.getElementById('todoList');
-    completeTask(taskList.value, this.key);
+    completedTask(taskList.value, this.key);
     console.log(taskList);
   }
 
-  // deleteTask() {
-  //   const task = document.getElementById('todoList');
-  //   removeTask(task.value, this.key);
-  //   this.listTasks();
-  // }
+  deleteTask() {
+    const task = document.getElementById('todoList');
+    removeTask(task.value, this.key);
+    this.listTasks();
+    console.log(this);
+  }
 }
 
 

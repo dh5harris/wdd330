@@ -9,6 +9,7 @@ export function bindTouch(selector, callback) {
     callback;
   });
   element.addEventListener('click', callback);
+  console.log(element);
 }
 
 export function readFromLS(key) {
