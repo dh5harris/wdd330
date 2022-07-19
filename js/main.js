@@ -34,6 +34,10 @@ const links = [
   {
     label: "Week 9 projects/notes ",
     url: 'week9/index.html'
+  },
+  {
+    label: "Final Project",
+    url: 'memory-game/index.html'
   }
 ]
 
